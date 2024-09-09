@@ -1,0 +1,17 @@
+.visible {
+	opacity: 1 !important;
+	transform: translate(0, 0) !important;
+}
+
+.stickyNote {
+	opacity: 0;
+	transform: translate(15px, 15px);
+	transition: 0.5s;
+	transition-delay: calc(0.02s * var(--i));
+	min-width: 200px;
+	min-height: 200px;
+	display: inline-block;
+	background-color: #fcffcc;
+	border-radius: 3px;
+	box-shadow: 3px 3px 3px 0px rgba(0, 0, 0, 0.1);
+}

@@ -1,0 +1,57 @@
+.menuWrapper {
+	position: absolute;
+	right: 30px;
+	bottom: 30px;
+}
+
+.menu {
+	position: relative;
+	width: 230px;
+	height: 230px;
+	padding: 0;
+	margin: 0;
+}
+
+.menu li {
+	list-style: none;
+	position: absolute;
+}
+
+.menu li.toggle {
+	right: 0;
+	bottom: 0;
+}
+
+.menu li:not(.toggle) {
+	left: 5px;
+	bottom: 5px;
+	transform-origin: 190px;
+	transition: 0.3s;
+	transition-delay: calc(0.1s * var(--i));
+	transform: rotate(0) translate(125px);
+	opacity: 0;
+}
+
+.menu li:not(.toggle) button {
+	transition: 0.3s;
+	transition-delay: calc(0.1s * var(--i));
+}
+
+.menu.active li:not(.toggle) {
+	transform: rotate(calc(90deg / 3 * var(--i)));
+	opacity: 1;
+}
+
+.menu.active li:not(.toggle) button {
+	transform: rotate(calc(-90deg / 3 * var(--i)));
+}
+
+.menu .toggle button {
+	width: 70px;
+	height: 70px;
+}
+
+.menu button {
+	width: 60px;
+	height: 60px;
+}
